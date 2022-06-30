@@ -20,7 +20,7 @@ export const GridLayout = (props : ReactGridLayoutProps) => {
 export const ResponsiveGridLayout = (props:Partial<ResponsiveProps>) => {
   const defaultProps : ResponsiveProps = {
     breakpoints:{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 },
-    cols:{lg: 24, md: 10, sm: 8, xs: 6, xxs: 4},
+    cols:{lg: 22, md: 10, sm: 8, xs: 6, xxs: 4},
     useCSSTransforms:true,
     rowHeight:30,
     draggableCancel:Selectors.noDrag,
