@@ -1,15 +1,26 @@
 import React from "react";
-import { Section } from "../Sections/Section";
-import { IOverview } from "../../constants/ConfigTypes";
+import { GridSection } from "../sections/GridSection";
+import { IOverview } from "../../constants/config-types";
 
 export function Overview(props: Partial<IOverview>){
   const defaultProps = {name:"Overview", intro:"I See Things"}
   const newProps = {...defaultProps, ...props}
-  return <Section id="Overview" name='Overview'>
-    <div style={{padding:'5px'}}>
-      <h1>{newProps.name}</h1>
-      <p>{newProps.intro}</p>
+  const logo = newProps.image ? <img style={{margin:'auto'}} alt="My face" src={newProps.image} /> : undefined
+  return <GridSection id="Overview" name='Overview'>
+    <div style={{padding:'2px', textAlign:'center'}}>
+      <div style={{ display:'inline-flex'}}>
+        <div style={{flex:'1 1', backgroundColor:'#333', borderRadius:'0% 50% / 50%'}}>
+          {logo}
+        </div>
+        <div style={{flex:'2 1', alignSelf:'center'}}>
+          <label><strong>{newProps.name}</strong></label>
+          <br/>
+          <label style={{fontSize:'.7em'}}>Software Engineer</label>
+        </div>
     </div>
-  </Section>
+      {/* TODO: self fitting font size */}
+      <p style={{fontSize:'.8em'}}>{newProps.description}</p> 
+    </div>
+  </GridSection>
 }
 export default Overview

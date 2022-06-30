@@ -1,11 +1,11 @@
-import Section from './Section'
+import GridSection from './GridSection'
 import GenericSection from './GenericSection'
 
 export {
-  Section, GenericSection
+  GridSection, GenericSection
 }
 const Sections = {
-  Section, GenericSection
+  GridSection, GenericSection
 }
 export default {
   Sections

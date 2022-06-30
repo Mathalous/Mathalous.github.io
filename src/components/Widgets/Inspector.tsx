@@ -1,11 +1,11 @@
 import React from "react";
-import {Section} from "../Sections/Section";
-import { IInspectorSettings, ConfigNames } from "../../constants/ConfigTypes";
+import {GridSection} from "../sections/GridSection";
+import { IInspectorSettings, ConfigNames } from "../../constants/config-types";
 
 export function Inspector(props:IInspectorSettings){
-  return <Section id={ConfigNames.Inspector} name={ConfigNames.Inspector} >
+  return <GridSection id={ConfigNames.Inspector} name={ConfigNames.Inspector} >
     {props.display}
-  </Section>
+  </GridSection>
 }
 
 export default Inspector

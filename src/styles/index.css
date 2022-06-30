@@ -1,28 +1,50 @@
 
-html, body, #root, .app{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.app{
   min-height:100vh;
-  /*height:100%;*/
 }
-.fill{
-  width:100%;
-  height:100%;
+
+html, body, #root{
+  background-color: black;
+  /*Firefox Scrollbar*/
+  scrollbar-color: #27332a #1a191f;
+  scrollbar-width: thin;
+  
+}
+
+/* Scrollbar for Everything Else */
+*::-webkit-scrollbar {
+  width: 8px;
+  height:8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a191f;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #27332a;
+  border-radius: 20px;
+  border: 3px double  rgba(66, 66, 66, .75);
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.fill{
+  width:100%;
+  height:100%;
+}
+
+img{
+  min-height: 0;
+  min-width: 0;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 
@@ -43,7 +65,7 @@ code {
   background: linear-gradient(to bottom right, slateGray, #43464b);
   padding:5px;
   user-select: none;
-  width: 4em;
+  min-width: 4em;
   border: 2px solid transparent;
   border-radius: 10px;
   transition: filter .5s;

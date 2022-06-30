@@ -1,4 +1,4 @@
-import { IBasicData, ISkill } from "../../constants/ConfigTypes";
+import { IBasicData, ISkill } from "../../constants/config-types";
 import { HTMLProps } from "react";
 import React from "react";
 

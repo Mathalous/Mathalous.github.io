@@ -1,6 +1,6 @@
 import { ClickArgs } from "../../constants/ClickArgs";
-import { IBasicData } from "../../constants/ConfigTypes";
-import {Section} from "../Sections/Section";
+import { IBasicData } from "../../constants/config-types";
+import {GridSection} from "../sections/GridSection";
 import React from "react";
 import { TagGroup } from "./TagGroup";
 import { Tag } from "./Tag";
@@ -10,7 +10,7 @@ export type TagSectionProps<T> = {
 }
 export function TagSection<T extends IBasicData>(props:TagSectionProps<T>){
   return (
-    <Section id={props.name} name={props.name}>
+    <GridSection id={props.name} name={props.name}>
       <TagGroup>
         {
           props.items.map( (item, index) => {
@@ -18,7 +18,7 @@ export function TagSection<T extends IBasicData>(props:TagSectionProps<T>){
           })
         }
       </TagGroup>
-    </Section>
+    </GridSection>
   )
 }
 export default TagSection

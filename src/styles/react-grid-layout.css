@@ -4,7 +4,6 @@
   overflow:auto;
   width:100%;
   height:100%;
-
   /* 
     This is used to prevent overflowing the flex container
     https://stackoverflow.com/questions/36230944/prevent-flex-items-from-overflowing-a-container
@@ -27,6 +26,7 @@
   text-align: center;
   background-color: var(--accent-grid-bgc, gray);
   font-size: 1.1em;
+  border-radius: var(--border-radius) var(--border-radius) calc(var(--border-radius)/3) calc(var(--border-radius)/3);
   
   max-width: 100%;
   max-height: 100%;
@@ -38,14 +38,6 @@
   user-select: none;
 }
 
-.gridItem{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
 .drag, .drag > *{
   cursor: grab;
 }
@@ -63,12 +55,14 @@
 .react-grid-layout {
   position: relative;
   transition: height 200ms ease;
+  --border-radius: 5px;
 }
 .react-grid-item {
   transition: all 200ms ease;
   transition-property: left, top;
   background-color: var(--accent-bgc, black);
   color:var(--accent-txt, white);
+  border-radius: var(--border-radius);
 }
 .react-grid-item.cssTransforms {
   transition-property: transform;

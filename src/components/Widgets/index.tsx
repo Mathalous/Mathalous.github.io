@@ -1,26 +1,25 @@
-import Careers    from './Careers'
-import Education  from './Education'
+import Background from './Background'
 import Inspector  from './Inspector'
 import Overview   from './Overview'
 import Projects   from './Projects'
+import Languages  from './Languages'
 import Skills     from './Skills'
 
 const Widgets = {
-  Careers   ,
-  Education ,
-  Inspector ,
-  Overview  ,
-  Projects  ,
-  Skills    ,
+  Background   ,
+  Inspector    ,
+  Overview     ,
+  Projects     ,
+  Languages    ,
+  Skills       ,
 }
 
 export {
-  Careers   ,
-  Education ,
+  Background,
   Inspector ,
   Overview  ,
   Projects  ,
-  Skills    ,
+  Languages ,
   Widgets   ,
 }
 
