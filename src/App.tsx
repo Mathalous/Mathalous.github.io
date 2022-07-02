@@ -78,7 +78,7 @@ function App() {
 
   return (
     <div className="app" >
-      <div style={{width:'100%', textAlign:'center', padding:'10px', color:'whitesmoke'}}>
+      <div style={{width:'100%', textAlign:'center', boxSizing:'border-box', padding:'10px', color:'whitesmoke'}}>
         Work in progress
       </div>
       <div >
