@@ -1,16 +1,10 @@
 import React from "react";
-import { IBasicData, ILanguage } from "../../../../constants/config-types";
+import { ILanguage } from "../../../../constants/config-types";
+import { GenericNodeProps } from "../ItemNode";
 
-export function View<T extends IBasicData>(props:{item:T}){
+export function LanguageFallback (props: GenericNodeProps<ILanguage>){
   return <div>
-    <div>{props.item.name}</div>
+    <div>{props.item.name}, level: {props.item.level}</div>
     <div>{props.item.description}</div>
-  </div>
-}
-
-export function LanguageFallback  (props:ILanguage){
-  return <div>
-    <div>{props.name}, level: {props.level}</div>
-    <div>{props.description}</div>
   </div>
 }

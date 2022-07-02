@@ -1,15 +1,43 @@
 import React from "react";
-import { IBasicData } from "../../../constants/config-types";
+import { ConfigNames, IBasicData } from "../../../constants/config-types";
+import { GenericFallback } from "./GenericFallback";
+import { GenericNodeProps, ItemNode } from "./ItemNode";
+import { CPlusPlus } from "./languages/CPlusPlus";
+import { CSharp } from "./languages/CSharp";
+import { CSS } from "./languages/CSS";
+import { Java } from "./languages/Java";
+import { JSX } from "./languages/JSX";
+import { Python } from "./languages/Python";
+import { TSX } from "./languages/TSX";
 
+let NamedViews : {[k in ConfigNames]:{[n:string]:ItemNode | undefined}} = {
+  Overview: {
 
-const DefaultView = (props:{item:IBasicData}) => <div>{`${props.item.name}: ${props.item.description}`}</div>
+  },
+  Languages: {
+    "C++": CPlusPlus,
+    "C#": CSharp,
+    "CSS":CSS,
+    "Java":Java,
+    "JSX":JSX,
+    "Python":Python,
+    "TSX":TSX
+  },
+  Projects: {
 
-export function NamedView(props:{item:IBasicData}){
+  },
+  Background: {
 
+  },
+  Inspector: {
 
-  switch (props.item.name){
+  },
+  Skills: {
 
-    default:
-      return <DefaultView item={props.item} />
   }
+}
+
+export function NamedView(props:{nodeProps:GenericNodeProps<IBasicData>, configName:ConfigNames}){
+  let View = NamedViews[props.configName][props.nodeProps.item.name]
+  return View ? <View {...props.nodeProps} /> : <GenericFallback {...props.nodeProps} />
 }

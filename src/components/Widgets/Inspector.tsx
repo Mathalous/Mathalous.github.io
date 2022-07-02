@@ -4,7 +4,9 @@ import { IInspectorSettings, ConfigNames } from "../../constants/config-types";
 
 export function Inspector(props:IInspectorSettings){
   return <GridSection id={ConfigNames.Inspector} name={ConfigNames.Inspector} >
-    {props.display}
+    <div style={{padding:'10px'}}>
+      {props.display}
+    </div>
   </GridSection>
 }
 
