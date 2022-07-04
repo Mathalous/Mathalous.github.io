@@ -10,6 +10,17 @@ export interface IBasicData{
   name:string,
   description:string
 }
+//TODO: Relocate
+export function missingData (name:string, description?:string): IBasicData {
+  let desc = description ?? "Expected data not found"
+  return {name:`Missing: ${name}`, description:desc}
+}
+//TODO: Relocate
+export function getItemOrDefault(items : IBasicData[],  name:string): IBasicData{
+  return items.find( (project) =>
+    project.name === name ) ?? missingData(name)
+} 
+
 export interface IOverview extends IBasicData{
   image?:string,
 }
@@ -23,7 +34,7 @@ export interface IInspectorSettings extends IBasicData{
   display:JSX.Element
 }
 
-export interface IConfig{
+export interface IConfig {
   [ConfigNames.Overview]:   IOverview,
   [ConfigNames.Skills]:     ISkill[],
   [ConfigNames.Languages]:  ILanguage[],

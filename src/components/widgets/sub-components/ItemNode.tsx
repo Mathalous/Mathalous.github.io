@@ -1,9 +1,10 @@
-
 import { UpdateInspectorArgs } from "../../../constants/ClickArgs"
-import { IBasicData } from "../../../constants/config-types"
+import { IBasicData, IConfig } from "../../../constants/config-types"
+
 
 export interface GenericNodeProps<T extends IBasicData> {
   item:T, 
+  config:IConfig,
   updateInspector: (args:UpdateInspectorArgs) => void
 }
 export interface NamedNodeProps extends GenericNodeProps<IBasicData>{}

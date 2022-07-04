@@ -9,7 +9,7 @@ export const Tag = (props:TagProps) => {
   const defaultMax = 5;
   const max = props.max ? props.max : defaultMax
   let skill = props.data as ISkill
-  return <div className="tag" {...props.divProps}>
+  return <div className="tag" {...props.divProps} >
     <div>
       {props.data.name}
     </div>

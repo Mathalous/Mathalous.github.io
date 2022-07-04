@@ -38,7 +38,7 @@ function generateWidgetDOM(config:IConfig, onTagClick?:(args:UpdateInspectorArgs
 }
 
 function App() {
-  const defaultInspectorItem = {name:'Things', level:5, description:'Not this one'}
+  const defaultInspectorItem = {name:'Things', level:5, description:'Good! Now try another.'}
 
   const [devMode, setDevMode] = React.useState<boolean>(false)
   const [layouts, setLayouts] = React.useState<Layouts>(defaultLayouts) 
@@ -58,7 +58,6 @@ function App() {
       }
       if((args as CustomUpdateArgs).getInspectorSettings){
         var inspectorArgs = (args as CustomUpdateArgs).getInspectorSettings(config);
-        console.log(inspectorArgs)
         setConfig({
           ...config,
           [ConfigNames.Inspector]: {...inspectorArgs}} 
@@ -72,10 +71,9 @@ function App() {
     setConfig({
       ...config,
       [ConfigNames.Inspector]: {name:args.clickArgs.item.name, description:args.clickArgs.item.description,
-         display:<NamedView nodeProps={{item:args.clickArgs.item, updateInspector}} configName={args.configName} />} 
+         display:<NamedView nodeProps={{item:args.clickArgs.item, updateInspector, config}} configName={args.configName} />} 
     })
   }
-
   return (
     <div className="app" >
       <div style={{width:'100%', textAlign:'center', boxSizing:'border-box', padding:'10px', color:'whitesmoke'}}>
@@ -87,8 +85,7 @@ function App() {
           style={{position:'relative', overflow:'auto'}}
           isBounded={true}
           layouts={layouts}
-          /*TODO: remove commented code, use example logic for setting grid parent's style={{width:'50%', margin:'auto'}} */
-          onLayoutChange={(_, allLayouts) => { /*console.log('layout',_ === allLayouts['xxs']);*/  setLayouts(allLayouts)}}
+          onLayoutChange={(currentLayout, allLayouts) => { setLayouts(allLayouts)}}
         >
           {generateWidgetDOM(config, updateInspector)}
         </ResponsiveGridLayout>

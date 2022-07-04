@@ -1,10 +1,9 @@
 import React from "react";
 import { ILanguage } from "../../../../constants/config-types";
+import { GenericFallback } from "../GenericFallback";
 import { GenericNodeProps } from "../ItemNode";
 
 export function LanguageFallback (props: GenericNodeProps<ILanguage>){
-  return <div>
-    <div>{props.item.name}, level: {props.item.level}</div>
-    <div>{props.item.description}</div>
-  </div>
+  //TODO: Add details?
+  return <GenericFallback {...props}/>
 }

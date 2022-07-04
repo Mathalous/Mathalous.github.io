@@ -31,7 +31,6 @@
   
   max-width: 100%;
   max-height: 100%;
-  color:var(--accent-grid-txt, white);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -62,7 +61,6 @@
   transition: all 200ms ease;
   transition-property: left, top;
   background-color: var(--accent-bgc, black);
-  color:var(--accent-txt, white);
   border-radius: var(--border-radius);
 }
 .react-grid-item.cssTransforms {
