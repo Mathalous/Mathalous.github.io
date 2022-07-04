@@ -12,7 +12,7 @@ export function Education (props: GenericNodeProps<IBackground>){
       I found college was only great for exposing you to topics of interest. To really understand the logic, hands on experience is necessary. Design patterns are a great example. It’s not until you need one that you really understand why you need it.
     </p>
     <p>
-      Unfortunately, there’s only so much time in the day. Furthering my degree would mean less time for my own projects and at present. I consider them more helpful to my development. That said, if I were to go back I would focus on software architecture. I enjoy writing code as cleanly as possible, and would love the chance to design API level code.
+      Unfortunately, there’s only so much time in the day. Furthering my degree would mean less time for my own projects and at present I consider them more helpful to my development. That said, if I were to go back I would focus on software architecture. I enjoy writing code as cleanly as possible, and would love the chance to design API level code.
     </p>
   </div>
 }
