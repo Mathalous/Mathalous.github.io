@@ -1,11 +1,12 @@
 import React, { CSSProperties } from "react";
 import { GridSection } from "../sections/GridSection";
 import { IOverview } from "../../constants/config-types";
+import { LinkedinLink } from "../sub-components/linkedin-link";
 
 export function Overview(props: Partial<IOverview>){
   const defaultProps = {name:"Overview", intro:"I See Things"}
   const newProps = {...defaultProps, ...props}
-  const logo = newProps.image ? <img style={{margin:'auto'}} alt="My face" src={newProps.image} /> : undefined
+  const logo = newProps.image ? <img className="profile-icon" style={{margin:'auto'}} alt="My face" src={newProps.image} /> : undefined
   let logoStyle : CSSProperties = {
     flex:'1 1', overflow:'hidden', 
     borderRadius:'0% 50% / 50%',  }
@@ -20,6 +21,7 @@ export function Overview(props: Partial<IOverview>){
           <label><strong>{newProps.name}</strong></label>
           <br/>
           <label style={{fontSize:'.7em'}}>Software Engineer</label>
+          <LinkedinLink src="https://www.linkedin.com/in/matthew-miller-mathalous" />
         </div>
     </div>
       {/* TODO: self fitting font size */}

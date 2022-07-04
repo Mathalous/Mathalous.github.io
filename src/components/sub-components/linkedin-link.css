@@ -1,0 +1,21 @@
+@keyframes fade-out{
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 25%;
+    color:white;
+  }
+}
+
+.linkedin-a{
+  color: #00a0dc;
+  text-align: center;
+  font-size: larger;
+  text-decoration: none;
+  animation: fade-out 3s ease-in-out alternate-reverse infinite;
+}
+
+.linkedin-a:hover{
+  animation: none;
+}
