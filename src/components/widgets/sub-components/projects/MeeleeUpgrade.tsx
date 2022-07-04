@@ -14,7 +14,9 @@ export function MeleeUpgrade(props:GenericNodeProps<IProject>){
       <p>
         Despite being a relatively simple refactor of another project, many people still use my modifications and have included it into their own projects. 
       </p>
-      <a href="https://hub.gamecreator.one/content/item/qyWPm6ZJhpT2QBPnbr6b">Melee Upgrade Mod</a>
+      <a href="https://hub.gamecreator.one/content/item/qyWPm6ZJhpT2QBPnbr6b">Melee Upgrade Mod</a><br/>
+      <a href="https://www.youtube.com/watch?v=eG6RsXwMt0Q&ab_channel=RVR">Credited in description</a>
+      <br/>
     </div>
     <div style={{flex:'5 0', flexDirection:'column'}}>
       <iframe title="Melee Upgrade" style={{display:'block', margin:'auto', height:'100%', width:'100%'}} src="https://giphy.com/embed/SWXMKsDomBTtEsEL2q" 
