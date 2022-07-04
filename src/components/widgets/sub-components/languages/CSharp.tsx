@@ -23,19 +23,16 @@ function CSharpInternal (props:GenericNodeProps<ILanguage>){
   return <div>
     <h3 style={{textAlign:'center'}} >{props.item.name}</h3>
     <p>
-      C# is currently my favorite language, with Typescript a close second. The strong typing, in addition to ref and out parameters, make this language one of the
-      easiest to express functionality. C# also handles interfaces, generics, abstract classes in an effective and concise manner.
+      C# is my favorite language at present, with Typescript a close second. Its strong typing, along with ref and out parameters, makes the language one of the easiest to express functionality. C# also handles interfaces, generics, and abstract classes in an effective and concise manner.
     </p>
     <p >
-      What I dislike the most about C# is that dictionaries can become difficult to use. I prefer Javascript and Python as those languages 
-      make dicts near effortless to use. My favorite language for dicts is Typescript, as the typing is very expresive once the syntax is understood.
+      What I dislike the most about C# is the encumbrance of dictionaries. The issue becomes obvious when using inner types that are also generic, as the length of the declaration becomes long and error prone because of missing angle brackets. Initializing with new() helps sometimes, but I often need to specify a more concrete implementation. I prefer JavaScript and Python. Both languages make dictionaries as accessible as arrays. Better yet is Typescript. Its typing is very expressive after the syntax learning curve.
     </p>
     <p>
-      Delegates are a close second in reguards to issues. Defining the signature makes using delegates a bit of a hassle. Inlining with Typescript is much more streamlined,
-      even if I often go back and define them seperately. It's nice to be able to get something working before breaking up the code into reusable chunks. 
+      Delegates in C# are a close second regarding syntactical grievances. Signature definitions make using delegates a hassle. Inlining with Typescript is much more streamlined, despite preferring to define them later. It's convenient for prototyping before refactoring the code into reusable chunks.
     </p>
     <p>
-      I've used C# both professionally and as a hobbiest. Links to the relavent projects are below.
+      I've used C# both professionally and as a hobbyist. Links to the relevant projects are below.
     </p>
     <TagGroup>
       {tags} 

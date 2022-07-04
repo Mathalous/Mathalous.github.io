@@ -7,23 +7,19 @@ import { GenericNodeProps } from "../ItemNode";
 import { LanguageFallback } from "./language-fallback";
 
 function CSSInternal (props:GenericNodeProps<ILanguage>){
-  let tags = makeTags(['CSS'], ConfigNames.Languages, props.config, props.updateInspector)
+  let tags = makeTags(['this'], ConfigNames.Projects, props.config,props.updateInspector).concat(
+    makeTags(['JSX','TSX'], ConfigNames.Languages, props.config, props.updateInspector))
+
   return <div>
     <h3 style={{textAlign:'center'}} >{props.item.name}</h3>
     <p>
-      I consider my CSS skills passable for my current needs. I have only dug into frontend development for a year or so
-      and the CSS was actually the most difficult part. Developers tend to dismiss the difficulty in correctly styling
-      elements, until they run into a number of bugs that can't be traced.
+      I consider my CSS skills passable for my current needs. I have only dug into frontend development for a year and the CSS was actually the most troublesome part. Developers have a habit of dismissing CSS. It’s ‘just’ styling after all. Until they incorrectly implemented the styling, and a plethora of untraceable bugs crop up. Worse is when it’s mistaken for JavaScript errors.
     </p>
     <p>
-      I find this is usually the result of default settings within the commonly used tags. The most annoying of which
-      for is box-sizing, especially when using percentage based units. Then there's the unexpected but useful tidbits 
-      such as margin:auto to center elements. I longer than I should have trying to use align and adjust properties
-      before realizing they only worked with flex displays.
+      This is usually the result of default settings within commonly used tags. The most annoying of which is box-sizing, especially when using percentage based units. Adding to the confusion are the unexpected but useful tidbits, such as using margin:auto to center elements. I took longer than I should have, trying to use the align and adjust properties before realizing they only worked with flex displays.
     </p>
     <p>
-      Going forward, I want to look into CSS animations more, and how they can be used together with react.
-      I plan to update this project again using react-transition-groups. 
+      In the future, I want to look into CSS animations more with a focus on how they can be implemented together with React. I plan to update this project later using react-transition-groups.
     </p>
     <TagGroup>
       {tags}

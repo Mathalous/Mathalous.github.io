@@ -15,22 +15,17 @@ function JSXInternal (props:GenericNodeProps<ILanguage>){
       At the time of making&nbsp;
     </p>
     {thisWebsiteTag}
-    <p style={{display:'inline'}}> website, I have been developing with react for about a year.
-      Learning it has been an interesting process, made harder by the official tutorials utilizing class based
-      components instead of functional components.
+    <p style={{display:'inline'}}> website, I have been developing React for about a year. Learning it has been an interesting process, made harder by the official tutorials using class-based components instead functional components.
     </p>
     <p>
-      Coming from object-oriented languages, I struggled to make the transition to functional based components at first.
-      Mostly, I had a hard time seperating the control of a component's state from the component itself. That said, there
-      is a lot to learn from the functional style. Despite not being object-oriented, the code naturally breaks itself
-      into much smaller chunks.
+      Coming from object-oriented languages, I struggled to transition to functional based components at first. I had a hard time separating the control of a component's state from the component itself. There is a lot to learn from the functional style. Functional code naturally breaks itself down into much smaller chunks than object-oriented. No matter how highly we regard encapsulation, the tediousness of creating a new file and thinking of a new name often causes slightly bloated classes that result in a loss of flexibility.
     </p>
     <p>
-      While I still prefer object-oriented programming, I find the difference to be less than I expected.
-      In most cases, functions are simply treated as classes. I would likely prefer a mixed approach and will need
-      to look into hybrid languages in the future.
+      While I still prefer object-oriented programming, I find the difference to be less than I expected. In most cases, I used functions as classes with a single path. I would likely prefer a mixed approach and will need to look into hybrid languages in the future.
     </p>
-    <TagGroup>{TSX.concat(thisWebsiteTag)}</TagGroup>
+    <TagGroup>{thisWebsiteTag.concat(TSX).concat(
+      makeTags(["CSS"], ConfigNames.Languages, props.config, props.updateInspector
+    ))}</TagGroup>
   </div>
 }
 

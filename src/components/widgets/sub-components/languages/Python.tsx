@@ -8,10 +8,7 @@ function PythonInternal (props: GenericNodeProps<ILanguage>){
   return <div>
     <h3 style={{textAlign:'center'}} >{props.item.name}</h3>
     <p>
-      Python is a language I want to like, but I'm not really a fan. I find it's import system tedious compared to
-      JavaScript. Likewise, JavaScript's package.json file handles dependencies much easier than python, especially
-      when trying to containerize multiple seperate projects. Infact, I prefer npm over pip in general, as I often
-      install a python package only to realize I need import from pkg3 instead of pkg
+      Python is a language I want to like, but I'm not really a fan. I find its import system tedious compared to JavaScript. Likewise, JavaScript's package.json file handles dependencies much easier than python, especially when trying to containerize multiple separate projects. In fact, I prefer npm over pip as I often install a python package only to realize I need to import from pkg3 instead of pkg.
     </p>
     <p>
       Then there are my issues with python's syntax. Colons instead of brackets, capital True and False, try/except 
@@ -19,11 +16,10 @@ function PythonInternal (props: GenericNodeProps<ILanguage>){
       and ugly naming preferences. __main__ and _private_one is as annoying to read as it is to type.
     </p>
     <p>
-      Displeasures asside, it does excel at single file scripts. If all you need is a barebones server or database,
-      python is the language of choice. There are also a few syntactical niceties with added keywords such as and, or, and in
+      Displeasures aside, it excels at single file scripts. If all you need is a barebones server or database, python is the language of choice. There are also a few syntactical niceties with added keywords such as and, or, and in.
     </p>
     <p>
-      I have used this in numerious small projects to create relay servers, databases, kafka pub/sub's, and avro formatters.
+      I have used this in several minor projects to create relay servers, databases, Kafka pub/sub’s, and Avro formatters.
     </p>
   </div>
 }

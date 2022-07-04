@@ -2,6 +2,8 @@ import React from "react";
 import { UpdateInspectorArgs } from "../../../constants/ClickArgs";
 import { ConfigNames, getItemOrDefault, IBasicData, IConfig } from "../../../constants/config-types";
 import Tag from "../../tags/Tag";
+import { Education } from "./backgrounds/Education";
+import { WorkHistory } from "./backgrounds/WorkHistory";
 import { GenericFallback } from "./GenericFallback";
 import { GenericNodeProps, ItemNode } from "./ItemNode";
 import { CPlusPlus } from "./languages/CPlusPlus";
@@ -29,7 +31,7 @@ let NamedViews : {[k1 in ConfigNames]:{[k2:string]:ItemNode | undefined}} = {
     "Java":Java,
     "JSX":JSX,
     "Python":Python,
-    "TSX":TSX
+    "TSX":TSX,
   },
   Projects: {
     'Melee Upgrade': MeleeUpgrade,
@@ -39,9 +41,12 @@ let NamedViews : {[k1 in ConfigNames]:{[k2:string]:ItemNode | undefined}} = {
     'Minecraft Plugin':MinecraftPlugin,
     'RAPT':RAPT,
     'Auto IVV':AutoIVV,
-    'Unity CBCC':UnityCBCC
+    'Unity CBCC':UnityCBCC,
   },
   Background: {
+    'Education':Education,
+    'Work History':WorkHistory,
+    
   },
   Inspector: {
 

@@ -8,8 +8,7 @@ export function ThisWebsite(props:{item:IProject}){
       All gifs are hosted using embedded Giphy.
     </p>
     <p>
-      It was created to showcase a few of my projects while giving me
-      an excuse to further my frontend skills
+      It’s intent is to showcase a few of my projects while giving me an excuse to further my frontend skills
     </p>
     <p>
       The source code is avalible on <a href="https://github.com/Mathalous/Mathalous.github.io/tree/main" >Github</a>
