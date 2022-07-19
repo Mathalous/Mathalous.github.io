@@ -18,8 +18,13 @@ export const Data : IConfig = {
     {name:"CSS",    level:4,  description:'Web styling using .css files'},
   ],
   [ConfigNames.Skills]:[
-    {name:"TBD",    level:3,  description:'N/A'},
-    {name:"TBD2",   level:4,  description:'N/A'},
+    {name:"Git",    level:4,  description:'I have used git and similar version control solutions long enough to be familiar with common use cases. I know enough to know there is much more to learn for specific situations but haven\'t had the need to master them.'},
+    {name:"Docker",   level:3,  description:'I have written a few Dockerfiles and docker-compose files involving shared volumes and networks.'},
+    {name:"Linux",   level:3,  description:'Linux has been a blast. I\'ve only used it for around a year, but am enjoying the simplicity using commands. While I still have much to learn, I am comfortable doing most common tasks.'},
+    {name:"OOP",   level:4,  description:'Object-Oriented programming is the default. While I would argue that there are times when functional programming makes more since, wraping that in an object is often easier for other developers use.'},
+    {name:"React", level:4, description:"I am comfortable using react for common use cases. Creating components, pulling dependencies into props, and UseState is second nature. I have less frequently created custom hooks, but know there is much more advanced usage."}
+    
+
   ],
   [ConfigNames.Projects]:[
     {name:'this',             description:'This website was created with react and typescript. The responsive widgets are made using the react-grid-layouts package.'},
